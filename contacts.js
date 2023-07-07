@@ -79,7 +79,7 @@ const addContact = async (name, email, phone) => {
     }
     //Add contact    
     const newContact = { id: nanoid(), name, email, phone };
-    console.log(newContact);
+    console.table(newContact);
     contacts.push(newContact);     
     
     await fs.writeFile(contactsPath, JSON.stringify(contacts));
